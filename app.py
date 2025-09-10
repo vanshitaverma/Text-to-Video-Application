@@ -15,7 +15,6 @@ import traceback
 
 import streamlit as st
 
-# Try to import here so we can show a friendly UI error if missing.
 try:
     from gradio_client import Client
 except Exception as e:

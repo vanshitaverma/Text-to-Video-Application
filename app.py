@@ -19,8 +19,8 @@ import streamlit as st
 try:
     from gradio_client import Client
 except Exception as e:
-    st.set_page_config(page_title="🎬 Text-to-Video Mini-Studio", layout="centered")
-    st.title("🎬 Text-to-Video Mini-Studio")
+    st.set_page_config(page_title="Text-to-Video Mini-Studio", layout="centered")
+    st.title("Text-to-Video Mini-Studio")
     st.error(
         "The Python package `gradio_client` is not installed in this environment.\n\n"
         "Install it and re-run:\n\n"
@@ -127,8 +127,8 @@ def generate_video(
     raise last_exc if last_exc else RuntimeError("Unknown generation failure.")
 
 # ----------------- UI -------------------
-st.set_page_config(page_title="🎬 Text-to-Video Mini-Studio", page_icon="🎬", layout="centered")
-st.title("🎬 Text-to-Video Mini-Studio")
+st.set_page_config(page_title="Text-to-Video Mini-Studio", page_icon="🎬", layout="centered")
+st.title("Text-to-Video Mini-Studio")
 st.caption("WAN 2.2 Space via `gradio_client` • No `st.secrets` required")
 
 with st.sidebar:
@@ -177,7 +177,7 @@ except Exception as e:
              f"**Error:** {e}\n\n```\n{traceback.format_exc()}\n```")
     st.stop()
 
-if st.button("Generate 🎥", use_container_width=True):
+if st.button("Generate Video", use_container_width=True):
     if not prompt.strip():
         st.warning("Please enter a prompt.")
         st.stop()
